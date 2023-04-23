@@ -1,0 +1,348 @@
+/* Document information
+    - Document : thé thème
+    - Version : 1.0.0
+    - Author : Alexis
+======================================*/
+/* Colors
+    - Defaut body text #eee
+    - h1               #eee
+    - h2               #333333
+    - h3
+    - button
+    - button:hover
+    - icon             #0c950c
+    - border
+======================================*/
+/* Fonts
+    - Default            Lato  
+    - Subtitle    
+======================================*/
+/* CSS directory
+    1. =Global
+    2. =Header
+    3. =Produits
+======================================*/
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Global ( par defaut )
+======================================*/
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #eee;
+    letter-spacing: -1px;            /* espacement des lettres */
+    font-weight: 300;
+    word-spacing: 8px;               /* Espacement des mots */
+}
+
+h2 {
+    color: #333333;
+    font-size: 250%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+h2:after { /* "after" ajout contenu cosmetique élément --> utilisation propriété "content" par defaut c'est une ligne */
+    display: block;
+    height: 2px;
+    background-color: green;
+    width: 100px;
+    content: "";                     /* "contenu" vide */
+    margin: 0 auto;                  /* pas de marge en haut et bas, centrage millieu */
+    margin-top: 10px;
+}
+
+h3 {
+    font-size: 160%;
+}
+
+p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+section {
+    padding: 30px 0 60px 0;
+}
+
+
+/* Header 
+======================================*/
+header {
+    height: 100vh;
+    background-position: center;
+    background-size: cover; 
+    background-image: linear-gradient(rgba(0,242,96,0.8), rgba(7,117,230,0.6)), url(./images/header.jpg);
+}
+
+.home-title {
+    position: relative;
+    margin-top: 30%;
+}
+
+.home-title h1 {
+    font-size: 340%;
+    color: #fff;
+    padding: 0;
+}
+
+.home-title h1 span {
+    font-weight: 700;
+}
+
+.home-title p {
+    color: #fff;
+}
+
+
+/* Button 
+======================================*/
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 10px;
+    transition: background-color 1s, color 1s, border 1s;  /* temps de transition à modifier élément */
+    margin-bottom: 20px;
+}
+
+.btn-full {
+    background-color: azure;
+    color: #5ee077;
+    margin-right: 15px;
+}
+
+.btn-full:hover {
+    background-color: #5ee077;
+    color: #fff;
+}
+
+.btn-ghost {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-ghost:hover {
+    border: 1px solid #fff;
+    background-color: #5ee077;
+    color: #fff;
+}
+
+
+/* Produits
+======================================*/
+.produits-plus {
+    margin: 20px 0;                  /* 20px pour le haut et le bas 0 à droite et à gauche */
+}
+
+.produits-plus .produits-icon:hover {
+    color: #575757;
+    transform: translateX(20px);
+}
+
+.produits-img {
+    max-width: 100%;
+    height: auto;                    /* "auto" pour que l'image s'adapte à la hauteur */
+}
+
+.produits-icon {
+    font-size: 34px;
+    color: #0c950c;
+    transition: all 1s;              /* "all" pour prendre tout les éléments */
+}
+
+
+/* Famille thés
+======================================*/
+.famille-the {
+    background-color: #cdf6e1;
+}
+
+.famille-details {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+}
+
+.famille-details img {
+    display: block;                  /* display block pour pouvoir centrer l'image */
+    margin: 0 auto;                  /* margin 0 auto permet de centrer l'image */
+    width: 80%;
+}
+
+.famille-details h4 {
+    text-align: center;
+}
+
+
+/* Galeries photos
+======================================*/
+.galeries-img {
+    display: block;
+    background-size: cover;          /* "cover" permet de prendre toute la div */
+    background-position: top center; /* image de font collé en haut et centrer */
+    background-repeat: no-repeat; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);  
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.galeries-img h4 {
+    position: relative;
+    top: 250px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+
+/* Clients
+======================================*/
+.clients {
+    background-image: linear-gradient(rgba(0,242,96,0.8), rgba(7,117,230,0.6)), url(./images/the-paysage.jpg);
+    background-size: cover;
+    background-attachment: fixed;     /* Fixe la photo, quand on scroll l'image ne bouge pas */
+}
+
+.clients h2 {
+    color: #fff;
+}
+
+.clients h2:after {
+    background-color: #fff;
+}
+
+blockquote {
+    padding: 5px;
+    font-style: italic;
+    line-height: 130%;
+    color: #fff;
+}
+
+blockquote:before {
+    content: " “ ";
+    font-family: 'Sanchez', serif; 
+}
+
+cite {
+    font-size: 90%;
+    display: block;
+    margin-top: 20px;
+}
+
+cite img {
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+/* Packs
+======================================*/
+.pack {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.pack h3 {
+    color: green;
+    font-weight: 400;
+}
+
+.pack h4 {
+    font-size: 200%;
+    font-weight: 100;
+}
+
+.pack-title span {
+    font-weight: 100;
+    font-size: 30%;
+    position: relative;              /* Position relative, top .. permet de mettre le "/mois" en position relative à son parent qui est le h4 */
+    top: -15px;
+    left: 2px;
+}
+
+.pack-title {
+    padding: 10px 10px 0 10px;
+    border-bottom: 1px solid #e3e0e0
+}
+
+.pack-premium {
+    position: relative;
+    bottom: 110px;
+    left: 150px;
+}
+
+.pack-title h3 .populaire {
+    position: relative;
+    margin-left: 15px;
+}
+
+.pack-content ul {
+    list-style: none;
+    padding: 20px;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+.pack-content ul li i {
+    font-size: 90%;
+    margin-right: 10px;
+}
+
+.pack-signup {
+    text-align: center;
+}
+
+.btn-pack {
+    background-color: green;
+    color: #fff;   
+    margin-bottom: 20px;
+}
+
+
+/* Contact
+======================================*/
+.contact-form {
+    margin-bottom: 30px;
+}
+
+.contact-message {
+    width: 100%;
+}
+
+.btn-contact {
+    background-color: green;
+    color: #5ee077;
+}
+
+/* Footer
+======================================*/
+footer {
+    background-color: #2c2c2c;
+    color: #fff;
+    height: 60px;
+    padding: 20px 20px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright a {
+    color: #fff;
+}
